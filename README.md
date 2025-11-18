@@ -85,19 +85,48 @@ This system enables users to browse pets available for adoption, submit adoption
 
 ```
 pet-ado-app/
-├── backend/
-│   ├── config/              # Configuration files
-│   ├── controllers/         # Business logic
-│   ├── models/              # Database models
-│   ├── middleware/          # Custom middleware
-│   ├── routes/              # API routes
-│   ├── utils/               # Helper functions
-│   ├── uploads/             # Local file storage
-│   ├── .env                 # Environment variables
-│   ├── server.js            # Entry point
-│   └── package.json
-├── frontend/
-│   ├── public/              # Static files
+backend/
+├── config/
+│   ├── database.js          # MongoDB connection
+│   ├── cloudinary.js        # Cloudinary configuration
+│   └── swagger.js           # Swagger/OpenAPI configuration
+├── controllers/              # HTTP request handlers
+│   ├── authController.js     # Authentication endpoints
+│   ├── petController.js      # Pet management endpoints
+│   └── applicationController.js # Application endpoints
+├── services/                 # Business logic layer
+│   ├── authService.js        # Authentication business logic
+│   ├── petService.js         # Pet management business logic
+│   └── applicationService.js # Application business logic
+├── repositories/             # Data access layer
+│   ├── userRepository.js     # User data operations
+│   ├── petRepository.js      # Pet data operations
+│   └── applicationRepository.js # Application data operations
+├── models/                   # Database schemas
+│   ├── User.js              # User model (Mongoose schema)
+│   ├── Pet.js               # Pet model (Mongoose schema)
+│   └── Application.js       # Application model (Mongoose schema)
+├── middleware/
+│   ├── auth.js              # JWT authentication middleware
+│   ├── validator.js         # Request validation rules
+│   ├── upload.js            # File upload configuration
+│   └── errorHandler.js      # Error handling middleware
+├── routes/
+│   ├── authRoutes.js        # Authentication routes
+│   ├── petRoutes.js         # Pet routes
+│   └── applicationRoutes.js # Application routes
+├── utils/
+│   ├── generateToken.js     # JWT token generation
+│   ├── apiResponse.js       # Standardized API response utility
+│   └── apiError.js          # Custom error classes
+├── uploads/                 # Local file uploads (if not using Cloudinary)
+├── .env                     # Environment variables
+├── .env.example            # Environment variables template
+├── server.js               # Application entry point
+├── package.json            # Dependencies and scripts
+└── README.md               # This file
+**frontend**│ 
+├── public/              # Static files
 │   ├── src/
 │   │   ├── components/      # React components
 │   │   ├── context/         # Context providers
