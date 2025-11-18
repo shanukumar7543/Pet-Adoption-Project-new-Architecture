@@ -139,6 +139,5 @@ backend/
 └── README.md
 ```
 
-**Note**: This is a production-ready application with all essential features implemented. Make sure to configure environment variables properly before deployment and use strong secrets in production.
 
 # Pet-Adoption
