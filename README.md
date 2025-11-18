@@ -1,6 +1,6 @@
 # 🐾 Pet Adoption System
 
-A comprehensive, production-ready full-stack web application for managing pet adoptions. Built with modern technologies and following MVC architecture patterns.
+A comprehensive, production-ready full-stack web application for managing pet adoptions. Built with modern technologies and following following a **Layered Architecture Pattern** with Repository and Service layers..
 
 ## 📋 Overview
 
